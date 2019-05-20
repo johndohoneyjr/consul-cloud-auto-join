@@ -1,6 +1,6 @@
 # Consul Auto-Join Example
 This repository demonstrates using Consul Cloud auto-join to create and update a Consul cluster on AWS.
-The [latest documentation for Consul](https://www.consul.io/docs/agent/options.html) shows new options we can specify in the Consul configuration file or startup parameters.
+The [documentation for Consul](https://www.consul.io/docs/agent/cloud-auto-join.html) shows the CLoud Auto-Join options that can be specified in the Consul configuration file or command line parameters.
 
 - `tag_key` - The Amazon EC2 instance tag key to filter on. When used with `tag_value`, Consul will attempt to join EC2 instances with the given tag key and value on startup. 
 - `tag-value` - The Amazon EC2 instance tag value to filter on.
@@ -62,7 +62,7 @@ servers = [
 After provisioning, it is possible to login to one of the client nodes via SSH using the IP address output from Terraform. 
 
 ```bash
-$ ssh ubuntu@34.251.206.78
+$ ssh centos@34.251.206.78
 ```
 
 Running the `consul members` command will show all members of the cluster and their status (both clients and servers).
