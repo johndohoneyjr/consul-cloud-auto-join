@@ -1,12 +1,12 @@
 # Consul Auto-Join Example
 This repository demonstrates using Consul Cloud auto-join to create and update a Consul cluster on AWS.
-The [documentation for Consul](https://www.consul.io/docs/agent/cloud-auto-join.html) shows the CLoud Auto-Join options that can be specified in the Consul configuration file or command line parameters.
+The [documentation for Consul](https://www.consul.io/docs/agent/cloud-auto-join.html) shows the Cloud Auto-Join options that can be specified in the Consul configuration file or command line parameters.
 
 - `tag_key` - The Amazon EC2 instance tag key to filter on. When used with `tag_value`, Consul will attempt to join EC2 instances with the given tag key and value on startup. 
 - `tag-value` - The Amazon EC2 instance tag value to filter on.
 - `region` - (Optional) The Amazon EC2 region to use. If not specified, Consul will use the local instance's EC2 metadata endpoint to discover the region.
 
-The new feature requires permission to read the AWS instance state, and there are a variety of options available to grant these permissions.
+This feature requires permission to read the AWS instance state, and there are a variety of options available to grant these permissions.
 
 - Static credentials (from the config file)
 - Environment variables (`AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`)
